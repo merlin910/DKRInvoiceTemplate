@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .company-info {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .invoice-details {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Deric Kramer Racing LLC</h2>
+        <p>Pro Stock Racer #52</p>
+    </header>
+    <section class="company-info">
+        <p>7125 Meadowgate Ln<br>Parker, CO 80138<br>Phone: (303) 915-8776<br>Email: Deric@derickramerracing.com</p>
+    </section>
+    <section class="invoice-details">
+        <p><strong>INVOICE:</strong> 00117</p>
+        <p><strong>DATE:</strong> 03/17/25</p>
+    </section>
+    <section>
+        <p><strong>TO:</strong><br>The Cool Company</p>
+        <p><strong>FOR:</strong><br>Racing Partnership</p>
+    </section>
+    <table class="invoice-table">
+        <tr>
+            <th>DESCRIPTION</th>
+            <th>DUE</th>
+            <th>PAYMENT</th>
+            <th>AMOUNT</th>
+        </tr>
+        <tr>
+            <td>Racing Partnership 2025 Season</td>
+            <td>3/17/2025</td>
+            <td>Full Season</td>
+            <td>$100,000,000.00</td>
+        </tr>
+    </table>
+    <p class="total">TOTAL: $100,000,000.00</p>
+    <p>Make all checks payable to Deric Kramer Racing LLC</p>
+    <p class="footer">Please pay upon receipt</p>
+    <p class="footer"><strong>THANK YOU FOR YOUR SUPPORT</strong></p>
+</body>
+</html>
