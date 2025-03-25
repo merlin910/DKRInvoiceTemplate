@@ -65,15 +65,14 @@
     <p>7125 Meadowgate Ln<br>Parker, CO 80138<br>Phone: (303) 915-8776<br>Email: Deric@derickramerracing.com</p>
 </section>
 <section class="invoice-details">
-<!--    <p><strong>INVOICE:</strong> 00117</p>-->
-    <p><strong>INVOICE2:</strong> <span id="invoice-number"></span></p>
-    <p><strong>DATE:</strong> 03/17/25</p>
-<!--    <p><strong>DATE:</strong> <span id="invoice-date"></span></p>-->
+    <p><strong>INVOICE:</strong> <span id="invoice-number"></span></p>
+<!--    <p><strong>DATE:</strong> 03/17/25</p>-->
+    <p><strong>DATE:</strong> <span id="invoice-date"></span></p>
 </section>
 <section>
-    <p><strong>TO:</strong><br>The Coolest Company</p>
+<!--    <p><strong>TO:</strong><br>The Coolest Company</p>-->
+    <p><strong>TO:</strong><br><span id="client-name"></span></p>
     <p><strong>FOR:</strong><br>Racing Partnership</p>
-<!--    <p><strong>TO:</strong><br><span id="client-name"></span></p>-->
 <!--    <p><strong>FOR:</strong><br><span id="invoice-description"></span></p>-->
 </section>
 <table class="invoice-table">
@@ -104,9 +103,9 @@
     // window.grist.ready();
     window.grist.ready({requiresAccess: 'read table'});
     window.grist.onRecord(function(record) {
-        document.getElementById("invoice-number").textContent = record.Invoice || "0987";
-        // document.getElementById("invoice-date").textContent = record.Date || "N/A";
-        // document.getElementById("client-name").textContent = record.Client || "N/A";
+        document.getElementById("invoice-number").textContent = record.Invoice || "N/A";
+        document.getElementById("invoice-date").textContent = record.Issued || "N/A";
+        document.getElementById("client-name").textContent = record.Client || "N/A";
         // document.getElementById("invoice-description").textContent = record.Description || "N/A";
         // document.getElementById("item-description").textContent = record.Item || "N/A";
         // document.getElementById("due-date").textContent = record.DueDate || "N/A";
