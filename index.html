@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
-    <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,12 +64,12 @@
     <p>7125 Meadowgate Ln<br>Parker, CO 80138<br>Phone: (303) 915-8776<br>Email: Deric@derickramerracing.com</p>
 </section>
 <section class="invoice-details">
-    <p><strong>INVOICE:</strong> <span id="invoice-number"></span></p>
-    <p><strong>DATE:</strong> <span id="invoice-date"></span></p>
+    <p><strong>INVOICE:</strong> 00117</p>
+    <p><strong>DATE:</strong> 03/17/25</p>
 </section>
 <section>
-    <p><strong>TO:</strong><br><span id="client-name"></span></p>
-    <p><strong>FOR:</strong><br><span id="invoice-description"></span></p>
+    <p><strong>TO:</strong><br>The Coolest Company</p>
+    <p><strong>FOR:</strong><br>Racing Partnership</p>
 </section>
 <table class="invoice-table">
     <tr>
@@ -80,30 +79,15 @@
         <th>AMOUNT</th>
     </tr>
     <tr>
-        <td><span id="item-description"></span></td>
-        <td><span id="due-date"></span></td>
-        <td><span id="payment-type"></span></td>
-        <td>$<span id="amount"></span></td>
+        <td>Racing Partnership 2025 Season</td>
+        <td>3/17/2025</td>
+        <td>Full Season</td>
+        <td>$100,000,000.00</td>
     </tr>
 </table>
-<p class="total">TOTAL: $<span id="total-amount"></span></p>
+<p class="total">TOTAL: 100,000,000.00</p>
 <p>Make all checks payable to Deric Kramer Racing LLC</p>
 <p class="footer">Please pay upon receipt</p>
 <p class="footer"><strong>THANK YOU FOR YOUR SUPPORT</strong></p>
-
-<script>
-    window.grist.ready();
-    window.grist.onRecord(function(record) {
-        document.getElementById("invoice-number").textContent = record.InvoiceNumber || "N/A";
-        document.getElementById("invoice-date").textContent = record.Date || "N/A";
-        document.getElementById("client-name").textContent = record.Client || "N/A";
-        document.getElementById("invoice-description").textContent = record.Description || "N/A";
-        document.getElementById("item-description").textContent = record.Item || "N/A";
-        document.getElementById("due-date").textContent = record.DueDate || "N/A";
-        document.getElementById("payment-type").textContent = record.Payment || "N/A";
-        document.getElementById("amount").textContent = record.Amount || "0.00";
-        document.getElementById("total-amount").textContent = record.Amount || "0.00";
-    });
-</script>
 </body>
 </html>
