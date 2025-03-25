@@ -101,9 +101,10 @@
 <p class="footer"><strong>THANK YOU FOR YOUR SUPPORT</strong></p>
 
 <script>
-    window.grist.ready();
+    // window.grist.ready();
+    window.grist.ready({requiresAccess: 'read table'});
     window.grist.onRecord(function(record) {
-        document.getElementById("invoice-number").textContent = record.Number || "N/A2";
+        document.getElementById("invoice-number").textContent = record.Invoice || "0987";
         // document.getElementById("invoice-date").textContent = record.Date || "N/A";
         // document.getElementById("client-name").textContent = record.Client || "N/A";
         // document.getElementById("invoice-description").textContent = record.Description || "N/A";
