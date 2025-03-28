@@ -102,24 +102,9 @@
 <script>
     // window.grist.ready();
     window.grist.ready({requiresAccess: 'read table'});
-    window.grist.ready({columns: ['Number', 'Issued']});
-    window.grist.onRecord(function (record, mappings) {
-        const mapped = window.grist.mapColumnNames(record);
-        // First check if all columns were mapped.
-        if (mapped) {
-            document.getElementById('invoice-number').src = mapped.Number;
-            document.getElementById('invoice-date').innerText = mapped.Issued;
-            console.log(`Using ${mappings.Number} and ${mappings.Issued} columns`);
-        } else {
-            // Helper returned a null value. It means that not all
-            // required columns were mapped.
-            console.error("Please map all columns");
-        }
-    });
     window.grist.onRecord(function(record) {
-
-        // document.getElementById("invoice-number").textContent = record.Number || "N/A";
-        // document.getElementById("invoice-date").textContent = record.Issued || "N/A";
+        document.getElementById("invoice-number").textContent = record.Number || "N/A";
+        document.getElementById("invoice-date").textContent = record.Issued || "N/A";
         document.getElementById("client-name").textContent = record.Client || "N/A";
         // document.getElementById("invoice-description").textContent = record.Description || "N/A";
         // document.getElementById("item-description").textContent = record.Item || "N/A";
